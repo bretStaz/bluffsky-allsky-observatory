@@ -1,0 +1,35 @@
+# Secrets & Local Configuration
+anomaly_detector/config.json
+pi_capture_node/node_config.local.json
+
+# Runtime Databases, Logs & State
+*.db
+*.db-wal
+*.db-shm
+*.log
+anomaly_detector/detections_history.json
+anomaly_detector/live_status.json
+anomaly_detector/adsb_live_state.json
+anomaly_detector/live_adsb_capture.json
+anomaly_detector/discord_bot_status.json
+anomaly_detector/guard_alert_cooldowns.json
+anomaly_detector/workflow_guard_status.json
+anomaly_detector/camera_calibration.json
+
+# Captured Images, Masks & Survey Data
+anomaly_detector/snapshots/
+anomaly_detector/survey_data/
+anomaly_detector/astrophoto_data/
+anomaly_detector/tle_cache/
+anomaly_detector/latest_live_frame*.jpg
+anomaly_detector/reference_day*.jpg
+anomaly_detector/sky_mask*.png
+anomaly_detector/sky_mask*.jpg
+
+# Python & OS
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+.DS_Store
+Thumbs.db

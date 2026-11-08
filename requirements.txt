@@ -1,0 +1,20 @@
+# ============================================================================
+# BluffSky All-Sky Observatory & AI Sky Analysis Suite — Server Dependencies
+# ============================================================================
+
+# --- Core Requirements (Required for Tier 1 CPU-Only & All GPU Tiers) ---
+numpy>=1.24.0
+opencv-python>=4.8.0
+requests>=2.31.0
+ephem>=4.1.5
+psutil>=5.9.5
+aiohttp>=3.9.0
+paramiko>=3.3.0
+
+# --- Windows Service Monitoring (Optional, Windows Only) ---
+pywin32>=306; sys_platform == "win32"
+
+# --- Tier 2 & Tier 3 GPU Acceleration & Daytime YOLO (Optional) ---
+# For NVIDIA CUDA GPUs, install PyTorch with CUDA from https://pytorch.org/
+torch>=2.1.0
+ultralytics>=8.1.0

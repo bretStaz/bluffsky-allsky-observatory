@@ -1,0 +1,22 @@
+[Unit]
+Description=BluffSky Option A High-Efficiency Science & Stereo Capture Daemon
+After=network-online.target lighttpd.service
+Wants=network-online.target
+Conflicts=allsky.service
+
+[Service]
+Type=simple
+User=pi
+Group=pi
+WorkingDirectory=/home/pi/allsky/bluffsky_node
+Environment="PYTHONUNBUFFERED=1"
+Environment="ALLSKY_HOME=/home/pi/allsky"
+ExecStart=/home/pi/allsky/venv/bin/python3 /home/pi/allsky/bluffsky_node/bluffsky_pi_node.py --config /home/pi/allsky/bluffsky_node/node_config.json
+Restart=always
+RestartSec=3
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=bluffsky-node
+
+[Install]
+WantedBy=multi-user.target
